@@ -13,5 +13,5 @@ class TorchCompat {
   static Future dispose() => _channel.invokeMethod('dispose');
 
   static Future<bool> get hasTorch async =>
-      await _channel.invokeMethod('hasTorch');
+      await _channel.invokeMethod('hasTorch') ?? false;
 }
